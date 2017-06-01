@@ -4040,8 +4040,9 @@ class: ipsec
 - Sniff network traffic and display all packets containing "HTTP":
   ```bash
   docker run --net host nicolaka/netshoot ngrep -tpd eth0 HTTP
+  #For PWD use the following:
+  docker run --net host nicolaka/netshoot ngrep -tpd eth1 HTTP
   ```
-
 ]
 
 --
@@ -4325,8 +4326,6 @@ class: node-info
 - `docker node ps` shows info about the current node
 
 - `docker node ps <node_name_or_id>` shows info for another node
-
-- `docker node ps -a` includes stopped and failed tasks
 
 ---
 
