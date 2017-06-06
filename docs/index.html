@@ -804,7 +804,7 @@ class: pic
 
 - Clone the repository on `node1`:
   ```bash
-  git clone git://github.com/jpetazzo/orchestration-workshop
+  git clone git://github.com/marcosnils/orchestration-workshop
   ```
 
 ]
@@ -3478,7 +3478,7 @@ TOKEN=$(docker swarm join-token -q manager)
 for N in $(seq 2 5); do
   DOCKER_HOST=tcp://node$N:2375 docker swarm join --token $TOKEN node1:2377
 done
-git clone git://github.com/jpetazzo/orchestration-workshop
+git clone git://github.com/marcosnils/orchestration-workshop
 cd orchestration-workshop/stacks
 docker stack deploy --compose-file registry.yml registry
 docker-compose -f dockercoins.yml build
@@ -5168,7 +5168,7 @@ class: elk-auto
 Note: the *build* and *push* steps are not strictly necessary, but they don't hurt!
 
 Let's have a look at the [Compose file](
-https://github.com/jpetazzo/orchestration-workshop/blob/master/stacks/elk.yml).
+https://github.com/marcosnils/orchestration-workshop/blob/master/stacks/elk.yml).
 
 ---
 
